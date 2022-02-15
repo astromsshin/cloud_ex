@@ -1,0 +1,3 @@
+:
+mycluster-minion-0
+mycluster-minion-1
