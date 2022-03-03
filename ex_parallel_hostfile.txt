@@ -1,3 +1,16 @@
 :
 mycluster-minion-0
 mycluster-minion-1
+mycluster-minion-2
+mycluster-minion-3
+mycluster-minion-4
+mycluster-minion-5
+mycluster-minion-6
+mycluster-minion-7
+mycluster-minion-8
+mycluster-minion-9
+mycluster-minion-10
+mycluster-minion-11
+mycluster-minion-12
+mycluster-minion-13
+mycluster-minion-14
