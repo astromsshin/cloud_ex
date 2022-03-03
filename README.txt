@@ -1,6 +1,7 @@
 The cluster name is mycluster in these examples, and 
-the number of hosts is 3. The cluster consists of a 
-single master and two slaves (i.e., minions).
+the number of hosts is 16 as described in 
+ex_mpirun_hostfile.txt and ex_parallel_hostfile.txt.
+The cluster consists of a single master and multiple slaves (i.e., minions).
 
 See the following documents:
 
