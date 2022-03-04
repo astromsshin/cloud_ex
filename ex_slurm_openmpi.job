@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mpirun --allow-run-as-root ./hostname.exe
+#mpirun --allow-run-as-root ./montecarlo_pi.exe
