@@ -12,3 +12,6 @@ See the following documents:
 - GNU Parallel's documentation https://www.gnu.org/software/parallel/sphinx.html
   In particular, tutorial on remote execution https://www.gnu.org/software/parallel/parallel_tutorial.html#remote-execution
 
+- Slurm sbatch document https://slurm.schedmd.com/sbatch.html
+        FAQ document https://slurm.schedmd.com/faq.html
+        OpenMPI FAQ document on Slurm https://www.open-mpi.org/faq/?category=slurm
