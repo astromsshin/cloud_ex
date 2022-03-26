@@ -3,6 +3,13 @@
 CLUSTERNAME="mycluster"
 MINIONLASTIND="14"
 
+echo "... checking ${CLUSTERNAME}-master"
+res=$(which munged mpirun | wc -l)
+if [ ${res} -ne "2" ]
+then
+  echo "[WARNING] ${CLUSTERNAME}-master is not ready yet."
+fi
+
 for ind in $(seq 0 ${MINIONLASTIND})
 do
   echo "... checking ${CLUSTERNAME}-minion-${ind}"
