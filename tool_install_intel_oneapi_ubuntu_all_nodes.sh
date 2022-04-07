@@ -14,7 +14,7 @@ echo $install_intel_oneapi | bash
 for ind in $(seq 0 ${MINIONLASTIND})
 do
   echo "... install on ${CLUSTERNAME}-minion-${ind}"
-  ssh ${CLUSTERNAME}-minion-${ind} "${intall_intel_oneapi}"
+  ssh ${CLUSTERNAME}-minion-${ind} "${install_intel_oneapi}"
 done
 
 
