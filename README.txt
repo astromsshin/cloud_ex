@@ -15,3 +15,7 @@ See the following documents:
 - Slurm sbatch document https://slurm.schedmd.com/sbatch.html
         FAQ document https://slurm.schedmd.com/faq.html
         OpenMPI FAQ document on Slurm https://www.open-mpi.org/faq/?category=slurm
+
+- Intel oneAPI https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html, 
+  in particular, Intel MPI Library Developer Guide for Linux OS 
+  https://www.intel.com/content/www/us/en/develop/documentation/mpi-developer-guide-linux/top.html
