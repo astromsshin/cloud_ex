@@ -1,7 +1,6 @@
 #!/bin/bash
 
 CLUSTERNAME="mycluster"
-MINIONLASTIND="14"
 NFSDIR="/mnt/mpi"
 
 CONDAENV="xclass"
