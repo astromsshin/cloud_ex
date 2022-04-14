@@ -17,6 +17,7 @@ conda update -y -n base -c defaults conda
 
 # creating the environment
 conda create -y -n ${CONDAENV} python=2.7
+conda activate ${CONDAENV}
 # adding new conda packages
 conda install -y -n ${CONDAENV} numpy scipy matplotlib astropy sqlite
 # adding pip packages
