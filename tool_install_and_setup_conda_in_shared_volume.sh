@@ -6,6 +6,9 @@ NFSDIR="/mnt/mpi"
 CONDAENV="xclass"
 CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
+# additional apt packages
+apt install zip
+
 # installation of miniconda
 cd ${NFSDIR}
 wget "${CONDAURL}" -O ./miniconda.sh
