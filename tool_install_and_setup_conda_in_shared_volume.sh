@@ -17,8 +17,16 @@ conda update -y -n base -c defaults conda
 
 # creating the environment
 conda create -y -n ${CONDAENV} python=2.7
-conda activate ${CONDAENV}
 # adding new conda packages
-conda install -y -n ${CONDAENV} numpy scipy matplotlib astropy sqlite
+conda install -y -n ${CONDAENV} numpy
+conda install -y -n ${CONDAENV} scipy
+conda install -y -n ${CONDAENV} matplotlib
+conda install -y -n ${CONDAENV} astropy
+conda install -y -n ${CONDAENV} sqlite
 # adding pip packages
+conda activate ${CONDAENV}
 pip install pyfits
+
+echo "Do the following things to use the environment ${CONDAENV}"
+echo "1) source ~/.bashrc"
+echo "2) conda activate ${CONDAENV}"
