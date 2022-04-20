@@ -24,8 +24,8 @@ done
 # generate ssh-key
 ssh-keygen -t ed25519 << ends_key
 ${NFSDIR}/id_ed25519
-
-
+\r
+\r
 ends_key
 
 ### master
