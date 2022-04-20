@@ -1,6 +1,9 @@
 #!/bin/bash
 
-pkgs=(astropy-utils python3-astropy python3-astropy-affiliated python3-astropy-healpix python3-astropy-helpers python3-sklearn python3-skimage python3-statsmodels python3-matplotlib)
+# list packages
+# search and check packages in https://packages.ubuntu.com/
+# for Ubuntu distributions
+pkgs=(astropy-utils python3-astropy python3-astropy-affiliated python3-astropy-healpix python3-astropy-helpers python3-sklearn python3-skimage python3-statsmodels python3-matplotlib python3-tqdm)
 
 CLUSTERNAME="mycluster"
 MINIONLASTIND="14"
