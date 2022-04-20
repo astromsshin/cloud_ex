@@ -9,7 +9,8 @@ CLUSTERNAME="mycluster"
 MINIONLASTIND="14"
 
 echo "... install on ${CLUSTERNAME}-master"
-apt update -y
+# (optional)
+#apt update -y
 for pkg in ${pkgs[@]}
 do
   apt install $pkg -y
@@ -18,7 +19,8 @@ done
 for ind in $(seq 0 ${MINIONLASTIND})
 do
   echo "... install on ${CLUSTERNAME}-minion-${ind}"
-  ssh ${CLUSTERNAME}-minion-${ind} "apt update -y"
+# (optional)
+#  ssh ${CLUSTERNAME}-minion-${ind} "apt update -y"
   for pkg in ${pkgs[@]}
   do
     ssh ${CLUSTERNAME}-minion-${ind} "apt install ${pkg} -y"
