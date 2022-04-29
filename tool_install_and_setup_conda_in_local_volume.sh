@@ -3,6 +3,13 @@
 CLUSTERNAME="mycluster"
 TMPDIR="/tmp"
 
+### [IMPORTANT]
+# This script downloads the conda installation script to /tmp directory from 
+# the url shown below.
+# The conda installation directory is ${HOME}/miniconda.
+# If you want to make the same conda environment available in all cluster nodes,
+# you should run this script in every node.
+
 CONDAENV="xclass"
 CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
