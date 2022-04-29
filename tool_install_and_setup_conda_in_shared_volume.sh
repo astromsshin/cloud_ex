@@ -2,6 +2,7 @@
 
 CLUSTERNAME="mycluster"
 NFSDIR="/mnt/mpi"
+TMPDIR="/tmp"
 
 ### [IMPORTANT]
 # Because this script uses the directory ${NFSDIR}/miniconda
@@ -25,7 +26,7 @@ CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 sudo apt install zip
 
 # installation of miniconda
-cd /tmp
+cd ${TMPDIR}
 wget "${CONDAURL}" -O ./miniconda.sh && bash ./miniconda.sh -u -b -p ${NFSDIR}/miniconda
 
 eval "$(${NFSDIR}/miniconda/bin/conda shell.bash hook)"

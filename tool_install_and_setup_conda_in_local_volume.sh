@@ -21,8 +21,7 @@ sudo apt install zip
 
 # installation of miniconda
 cd ${TMPDIR}
-wget "${CONDAURL}" -O ./miniconda.sh
-bash ./miniconda.sh -b -p ${HOME}/miniconda
+wget "${CONDAURL}" -O ./miniconda.sh && bash ./miniconda.sh -u -b -p ${HOME}/miniconda
 
 eval "$(${HOME}/miniconda/bin/conda shell.bash hook)"
 conda init
