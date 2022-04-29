@@ -25,7 +25,7 @@ CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 sudo apt install zip
 
 # installation of miniconda
-cd ${NFSDIR}
+cd /tmp
 wget "${CONDAURL}" -O ./miniconda.sh
 bash ./miniconda.sh -b -p ${NFSDIR}/miniconda
 
