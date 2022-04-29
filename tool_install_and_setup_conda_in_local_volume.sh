@@ -14,7 +14,10 @@ CONDAENV="xclass"
 CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
 # additional apt packages
-apt install zip
+# [IMPORTANT] this requires root permission                                     
+# If you like to install apt pacakges separately in root account,               
+# delete the following part.
+sudo apt install zip
 
 # installation of miniconda
 cd ${TMPDIR}
