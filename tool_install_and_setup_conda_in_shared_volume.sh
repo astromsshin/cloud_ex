@@ -3,6 +3,14 @@
 CLUSTERNAME="mycluster"
 NFSDIR="/mnt/mpi"
 
+### [IMPORTANT]
+# Because this script uses the directory ${NFSDIR}/miniconda
+# as a Conda directory, the account running this script must have 
+# a permission to create/write the directory ${NFSDIR}/miniconda.
+# One way is to create the directory ${NFSDIR}/miniconda as root user,
+# and then the owner of the directory is changed to the account running 
+# this script.
+
 CONDAENV="xclass"
 CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 
