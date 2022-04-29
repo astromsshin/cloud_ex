@@ -9,7 +9,11 @@ NFSDIR="/mnt/mpi"
 # a permission to create/write the directory ${NFSDIR}/miniconda.
 # One way is to create the directory ${NFSDIR}/miniconda as root user,
 # and then the owner of the directory is changed to the account running 
-# this script.
+# this script. For example, as root account, 
+# mkdir /mnt/mpi/miniconda
+# chown ubuntu:ubuntu /mnt/mpi/miniconda
+# if you like to use the conda environment as ubuntu account and you are
+# running this script as ubuntu account.
 
 CONDAENV="xclass"
 CONDAURL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
