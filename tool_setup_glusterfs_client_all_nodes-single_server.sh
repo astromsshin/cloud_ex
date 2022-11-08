@@ -12,7 +12,7 @@ GLUSTERSERVERNAME="test-gl-vm"
 TARGETDIR="/mnt/gluster"
 
 
-RUNCMD="apt -y install glusterfs-client; echo ${GLUSTERSERVERIP} ${GLUSTERSERVERNAME} >> /etc/hosts;mkdir ${TARGETDIR}; mount -t glusterfs ${GLUSTERSERVERNAME}:/gvol ${TARGETDIR}"
+RUNCMD="apt -y install glusterfs-client; echo ${GLUSTERSERVERIP} ${GLUSTERSERVERNAME} >> /etc/hosts;mkdir ${TARGETDIR}; mount -t glusterfs ${GLUSTERSERVERNAME}:/gvol ${TARGETDIR}; chmod -R 777 ${TARGETDIR}"
 
 echo "... setuping on ${CLUSTERNAME}-master"
 echo $RUNCMD | bash
