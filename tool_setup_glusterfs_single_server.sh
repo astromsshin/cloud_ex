@@ -12,8 +12,9 @@ apt install glusterfs-server -y
 systemctl enable --now glusterd
 
 # Information
-gluster --version
-systemctl status glusterd
+# (optional)
+#gluster --version
+#systemctl status glusterd
 
 # Prepare the directory
 mkdir -p ${TARGETDIR}
@@ -23,5 +24,6 @@ gluster volume create ${TARGETVOL} ${VMNAME}:${TARGETDIR} force
 gluster volume start ${TARGETVOL}
 
 # Information
-gluster volume info
-gluster volume status
+# (optional)
+#gluster volume info
+#gluster volume status
