@@ -30,7 +30,7 @@ do
 done
 
 # Rest of tasks 
-RUNCMD="apt -y install glusterfs-client; mkdir ${TARGETDIR}; mount -t glusterfs ${GLUSTERSERVERNAME}:/gvol ${TARGETDIR}; chmod -R 777 ${TARGETDIR}"
+RUNCMD="apt -y install glusterfs-client; mkdir ${TARGETDIR}; mount -t glusterfs ${NAMEARRAY[0]}:/gvol ${TARGETDIR}; chmod -R 777 ${TARGETDIR}"
 # ... Master
 echo "... setuping on ${CLUSTERNAME}-master"
 echo $RUNCMD | bash
