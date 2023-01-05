@@ -10,6 +10,9 @@ TARGETVOL="gvol"
 # Name of the Gluster cluster
 CLUSTERNAME="glustercluster"
 MINIONLASTIND="0"
+# Saving Gluster server information
+HOSTNAMEFN="gluster_server_hostnames.txt"
+HOSTIPFN="gluster_server_ips.txt"
 
 # Install the server
 echo "... install on ${CLUSTERNAME}-master"
@@ -53,3 +56,8 @@ gluster volume start ${TARGETVOL}
 
 # Information
 gluster volume info
+
+echo "Use ${HOSTNAMEFN} for clients"
+gluster volume info | grep "^Brick.:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs | tee ${HOSTNAMEFN}
+echo "Use ${HOSTIPFN} for clients"
+gluster volume info | grep "^Brick.:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs -I {} grep -m 1 "{}" /etc/hosts | cut -d' ' -f1 | xargs | tee ${HOSTIPFN}
