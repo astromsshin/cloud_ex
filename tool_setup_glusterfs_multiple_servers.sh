@@ -8,8 +8,8 @@ TARGETDIR="/glusterfs/vol"
 # Gluster filesystem volume available for clients
 TARGETVOL="gvol"
 # Name of the Gluster cluster
-CLUSTERNAME="glustercluster"
-MINIONLASTIND="0"
+CLUSTERNAME="gluster-input"
+MINIONLASTIND="10"
 # Saving Gluster server information
 HOSTNAMEFN="gluster_server_hostnames.txt"
 HOSTIPFN="gluster_server_ips.txt"
@@ -55,9 +55,11 @@ gluster volume create ${TARGETVOL} ${VOLSTR} force
 gluster volume start ${TARGETVOL}
 
 # Information
-gluster volume info
+# (optional)
+#gluster volume info
+#gluster volume status
 
 echo "Use ${HOSTNAMEFN} for clients"
-gluster volume info | grep "^Brick.:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs | tee ${HOSTNAMEFN}
+gluster volume info | grep "^Brick[0-9]*:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs | tee ${HOSTNAMEFN}
 echo "Use ${HOSTIPFN} for clients"
-gluster volume info | grep "^Brick.:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs -I {} grep -m 1 "{}" /etc/hosts | cut -d' ' -f1 | xargs | tee ${HOSTIPFN}
+gluster volume info | grep "^Brick[0-9]*:" | grep -v 'Bricks:' | awk -F':' '{print $2}' | xargs -I {} grep -m 1 "{}" /etc/hosts | cut -d' ' -f1 | xargs | tee ${HOSTIPFN}
