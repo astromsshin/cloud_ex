@@ -15,12 +15,12 @@ TARGETDIR="/mnt/nas-input"
 
 RUNCMD="apt -y install nfs-common; mkdir ${TARGETDIR}; mount -t nfs ${NASIP}:${NASDIR} ${TARGETDIR}"
 
-echo "... setuping on ${CLUSTERNAME}-master"
+echo "... mounting on ${CLUSTERNAME}-master"
 echo $RUNCMD | bash
 
 for ind in $(seq 0 ${MINIONLASTIND})
 do
-	  echo "... setuping on ${CLUSTERNAME}-minion-${ind}"
+	  echo "... mounting on ${CLUSTERNAME}-minion-${ind}"
 	    ssh ${CLUSTERNAME}-minion-${ind} "${RUNCMD}"
     done
 
