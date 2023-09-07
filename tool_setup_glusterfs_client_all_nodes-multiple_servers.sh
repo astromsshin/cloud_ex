@@ -20,8 +20,8 @@ echo "Deleting existing entries in /etc/hosts"
 # ... Master
 for (( i=0; i<=${#IPARRAY[@]}; i++ ))
 do
-	sed -i "/${NAMEARRAY[$i]}/d" /etc/hosts
-	sed -i "/${IPARRAY[$i]}/d" /etc/hosts
+	sed -i "/ ${NAMEARRAY[$i]}$/d" /etc/hosts
+	sed -i "/ ${IPARRAY[$i]}$/d" /etc/hosts
 done
 # ... Minion
 for ind in $(seq 0 ${MINIONLASTIND})

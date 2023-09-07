@@ -18,5 +18,3 @@ do
   echo "... umount on ${CLUSTERNAME}-minion-${ind}"
   ssh ${CLUSTERNAME}-minion-${ind} "${RUNCMD}"
 done
-
-
